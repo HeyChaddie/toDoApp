@@ -1,5 +1,7 @@
 "use strict";
 
+// Henter vejrdata her.
+
 async function getWeather(chosenDate) {
   let response = await fetch(
     `https://api.open-meteo.com/v1/forecast?latitude=55.67594&longitude=12.56553&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=Europe%2FBerlin&start_date=${chosenDate}&end_date=${chosenDate}&models=dmi_seamless`,
@@ -12,6 +14,8 @@ async function writeWeatherToHTML() {
   console.log(weather);
   document.querySelector(".weather").textContent = weather.daily.weather_code[0];
 }
+
+// Array til vores verjkoder.
 
 const weatherCodes = [
   { code: 0, description: "Clear sky" },
@@ -56,12 +60,16 @@ const weatherCodes = [
   { code: 99, description: "Thunderstorm with heavy hail" },
 ];
 
+// Slice vores kalender, så vi kun får dato og år, ikke tid.
+
 const btnAddTodo = document.getElementById("btnAddTodo");
 const todos = [];
 const date = document.querySelector("#date");
 date.value = new Date().toISOString().slice(0, 10);
 
 btnAddTodo.addEventListener("click", handleAddTodo);
+
+// funktion til submitting af input og valg af checkmark og dato.
 
 async function handleAddTodo() {
   const input = document.getElementById("todoText");
@@ -97,6 +105,8 @@ async function handleAddTodo() {
 
   listAllToDos();
 }
+
+// funktion, hvis handleAddTodo går igennem.
 
 function listAllToDos() {
   const taskContainer = document.querySelector(".contentToDos");
