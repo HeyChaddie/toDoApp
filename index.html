@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="topInput">
+        <div class=""></div>
+        <h1>Todo App</h1>
+        <input type="text" placeholder="Todo text here..." id="todoText" />
+        <br />
+        <input type="date" id="date" />
+        <input type="checkbox" class="outdoor" value="outdoors" />
+        <label for="outdoor"> Is it outdoors? </label>
+        <br />
+        <button id="btnAddTodo">Add Todo</button>
+      </div>
+      <div class="mainContentToDos">
+        <div class="contentToDos"></div>
+        <div class="toDosDone"></div>
+      </div>
+    </main>
+  </body>
+</html>

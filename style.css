@@ -1,0 +1,73 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.lineThrough {
+  text-decoration: line-through;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+main {
+  background-color: #f6f5f5;
+  width: 600px;
+  padding: 10px;
+  padding-top: 20px;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  border: none;
+  background-color: white;
+}
+
+#todoText {
+  width: 450px;
+  height: 30px;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+
+#date {
+  width: 110px;
+  height: 30px;
+  border: none;
+}
+
+#btnAddTodo {
+  width: 110px;
+  height: 30px;
+  margin-top: 10px;
+}
+
+.topInput {
+  background-color: #a3a3a3;
+  margin-bottom: 10px;
+  padding-top: 30px;
+  padding-left: 20px;
+  height: 175px;
+  color: #eeeeee;
+}
+
+.myToDo {
+  padding: 20px;
+}
+
+.contentToDos {
+  background-color: rgb(169, 242, 210);
+  color: #424141;
+}
+.toDosDone {
+  background-color: rgb(237, 126, 114);
+  color: #eeeeee;
+}
